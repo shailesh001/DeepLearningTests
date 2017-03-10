@@ -59,4 +59,5 @@ for i in range(1000):
     sess.run(train_op, feed_dict={tfX: X, tfY: T})
     pred = sess.run(predict_op, feed_dict={tfX: X, tfY: T})
     if i % 10 == 0:
+        print('Y == pred', Y == pred)
         print(np.mean(Y == pred))
